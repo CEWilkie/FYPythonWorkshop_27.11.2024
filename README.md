@@ -4,7 +4,7 @@ Repo to store contents for the First Year Python Workshop hosted 27th November 2
 
 ## Python Guide Contents
 
-#### [A Guide To Functions](Guides/A Guide To Functions.md)
-#### [A Guide To Functions](Guides/A Guide To Functions.md)
-#### [A Guide To Functions](Guides/A Guide To Functions.md)
-#### [A Guide To Functions](Guides/A Guide To Functions.md)
+#### [A Guide To Functions](Guides/A%20Guide%20To%20Functions.md)
+#### [A Guide To Functions](Guides/A%20Guide%20To%20Functions.md)
+#### [A Guide To Functions](Guides/A%20Guide%20To%20Functions.md)
+#### [A Guide To Functions](Guides/A%20Guide%20To%20Functions.md)
