@@ -24,8 +24,10 @@ https://www.w3schools.com/python/ref_string_split.asp
 
 
                 PART THREE
-
-
+- Loop over a 2D Array of `SimpleClass` objects:
+    - Output the key value 'Name'
+    - Call their function `ReadyToDisplay()`. If this is true, call their function `DisplayInformation()`
+      otherwise, skip on to the next class
 
 
 
@@ -35,7 +37,7 @@ https://www.w3schools.com/python/ref_string_split.asp
 
 # fileLines is a list of lines read from a file
 
-fileLines = open('../Test/BasicTextFile1.txt').readlines()
+fileLines = open('../ImportFiles/BasicTextFile1.txt').readlines()
 maxLines = len(fileLines)
 
 # Loop to read through the lines:
@@ -50,3 +52,43 @@ sentence = "Howdy hey and good afternoon, have you seen how close it is to the C
 wordsList = []
 
 # Loop to get each word from sentence before close
+
+
+
+
+
+
+
+
+
+
+import random
+
+# Dont worry about this class, you wont need to change anything in it for this section
+
+class SimpleClass() :
+    name = "_unsetName"
+    number = random.randint(0, 50)
+    readyToDisplay = False
+    def __init__(self, name, displayable = False):
+        self.name = name
+        self.readyToDisplay = displayable
+
+    def ReadyToDisplay(self):
+        return self.readyToDisplay
+
+    def DisplayInformation(self):
+        print(f"Hello! My name is {self.name}")
+
+
+objects = [["Object 1", SimpleClass("My Object 1", True)],
+           ["Object 2", SimpleClass("Another Object", True)],
+           ["Object 3", SimpleClass("This Object should not display")],
+           ["Object 4", SimpleClass("Final Object", True)]]
+
+
+# Loop over all objects for output
+
+
+
+

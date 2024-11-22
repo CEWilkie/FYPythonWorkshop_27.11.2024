@@ -19,16 +19,16 @@ Suggested Material:
 
 
                 PART TWO
-- Function takes in another parameter for the menu title
-- Function now prints each menu option with an incrementing index starting from 1 (options 1, 2, 3, 4, ...)
+- GetMenuSelection takes in another parameter for the menu title
+- GetMenuSelection now prints each menu option with an incrementing index starting from 1 (options 1, 2, 3, 4, ...)
 
 Suggested Material
 "A Guide To Loops" or Loop Creation 1.py
 
 
                 PART THREE
-- Function will now ensure that the user enters a suitable input within the range of 1 to the max option index
-- Function will now return an integer index value
+- GetMenuSelection will now ensure that the user enters a suitable input within the range of 1 to the max option index
+- GetMenuSelection will now return an integer index value
 
 (note that you do not need to worry about checking if the user input is a valid integer, thats covered in
 "TryCatch 1")
