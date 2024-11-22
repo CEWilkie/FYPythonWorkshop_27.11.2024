@@ -12,7 +12,7 @@ will find these useful!
 
 #### [A Guide To Loops](Guides/A%20Guide%20To%20Loops.md)
 #### [A Guide To Functions](Guides/A%20Guide%20To%20Functions.md)
-#### [A Guide To TryCatch](Guides/A%20Guide%20To%20TryCatch.md)
+#### [A Guide To TryExcept](Guides/A%20Guide%20To%20TryExcept.md)
 #### [A Guide To Classes](Guides/A%20Guide%20To%20Classes.md)
 
 ## Additional Guides
