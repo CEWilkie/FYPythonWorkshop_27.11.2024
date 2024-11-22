@@ -7,9 +7,9 @@ FileReadWriteTest_path = "../ImportFiles/FileReadWriteTest.txt"
 
 
 # Open up the file, whilst mode "r" (read) can be specified as in the second variation shown,
-# it is also the default mode and so is not required
+# it is also the default mode and so is not required, hence the following two commands are the same
 file = open(FileReadWriteTest_path)
-file = open(FileReadWriteTest_path, mode="r")
+file = open(FileReadWriteTest_path, "r")
 
 for line in file.readlines():
     print(line, end="") # `end=""` drops the newline character for more compact print. This isnt necessary
