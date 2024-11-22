@@ -2,6 +2,9 @@
 
 #### [Return to Contents](../README.md)
 
+Additional Materials found at:<br>
+[Loops In Python - GeeksForGeeks](https://www.geeksforgeeks.org/loops-in-python/?ref=outind)
+
 ### What are they?
 
 Loops perform an execution of some set instructions multiple times, depending on the 
@@ -12,6 +15,7 @@ Loops will perform the full set of executions within them before returning to ch
 and/or updating their conditions. The only exceptions are when `break` is explicitly called
 to exit from a loop early, or an error occurs halting the program entirely.
 
+##
 ### Types of Loops
 
 #### For Loop
@@ -169,3 +173,63 @@ file = open("../ImportFiles/BasicTextFile1.txt")
 while (line := file.readline()) != "":
     print(line, end="")
 ```
+
+##
+### Break, Continue and Else
+
+`Break` and `Continue` are two keywords often particularly helpful to employ in your loops. Break
+will cause an immediate exit from the loop, regardless of the current state of the loop condition.
+Continue will result in the current iteration halting, and the loop immediately proceeding to the 
+next iteration.
+
+```python
+def FindChar(string, char):
+    index = 0
+    for c in string:
+        if c == char:
+            break
+        
+        index += 1
+
+    return index
+```
+
+`break` is useful for ensuring that loops do not continue forever, and providing early exits for
+when a loop is no longer required to run. The above example is a function that finds the index of
+a specific character in a string. should the character appear, the program no longer needs to 
+iterate over the string, hence it breaks the loop early.
+
+```python
+myStock = {"apples" : 15, "bananas" : 7, "strawberries" : 12}
+
+def PrintLowStock(stock):
+    for item in stock:
+        if stock[item] > 10:
+            continue
+
+        # item has low stock!
+        print(item + " has low stock! Only: " + str(stock[item]) + " remaining!")
+
+PrintLowStock(myStock)
+```
+
+`continue` is useful for ensuring that actions only occur if particular conditions are met. In this
+loop, we only want to inform the user of low stock when the condition (the stock count is <= 10)
+is met. Hence whenever the stock count is greater than 10 we continue to the next iteration of the 
+loop.
+
+```python
+nums = [1, 9, 7, 3, 11]
+
+for n in nums:
+    if n % 2 == 0:
+        print("list contains even number")
+        break
+        
+# only when no even numbers
+else:
+    print("list does not contain an even number")
+```
+
+`else` blocks when attached to a loop always execute after a loop completes. The only exception
+being when a loop is exited via a `break` command - where the else code will not execute.

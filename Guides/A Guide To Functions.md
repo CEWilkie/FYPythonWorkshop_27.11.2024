@@ -2,6 +2,10 @@
 
 #### [Return to Contents](../README.md)
 
+Additional Materials found at:
+<br>[Python Functions - GeeksForGeeks](https://www.geeksforgeeks.org/python-functions/?ref=outind)
+<br>[Python Functions - w3schools](https://www.w3schools.com/python/python_functions.asp)
+
 ### What are they?
 
 Functions are a set of instructions executed whenever the function name is called. 
