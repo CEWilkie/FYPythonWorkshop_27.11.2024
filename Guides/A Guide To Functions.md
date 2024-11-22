@@ -1,5 +1,7 @@
 # Functions
 
+#### [Return to Contents](../README.md)
+
 ### What are they?
 
 Functions are a set of instructions executed whenever the function name is called. 
@@ -96,6 +98,49 @@ Here, dataBase and recordList both clearly set out what is expected to be passed
 the function, and should work towards minimising errors when debugging or using the
 function.
 
+Default values can also be set for parameters, using an assignment:
+```python
+def GetMenuSelection(menuOptions = None, inputPrompt = "Enter Input: "):
+    if menuOptions is None:
+        menuOptions = ["Yes", "No"]
+    
+    print("::: User Menu :::")
+    for option in menuOptions:
+        # prints out option 
+        print("- " + option)
+        
+    # get input
+    return input(inputPrompt)
+
+GetMenuSelection(inputPrompt="Please Enter an Input:")
+```
+
+Default parameters allow the function to not require explicitly set parameters when calling,
+but are overwritten whenever the parameter is specified. It is important to note that any 
+parameter with a default argument must come at the end of the list of parameters, as any
+parameter after that must also have a default argument. The example below would hence be invalid:
+
+```python
+def GetMenuSelection(menuOptions = None, inputPrompt):
+    if menuOptions is None:
+        menuOptions = ["Yes", "No"]
+    
+    print("::: User Menu :::")
+    for option in menuOptions:
+        # prints out option 
+        print("- " + option)
+        
+    # get input
+    return input(inputPrompt)
+
+GetMenuSelection(inputPrompt="Please Enter an Input:")
+```
+
+As for why `= None` is being used here instead of assigning to the list, well its best 
+I let you read up on it through [this StackOverflow post](https://stackoverflow.com/questions/41686829/why-does-pycharm-warn-about-mutable-default-arguments-how-can-i-work-around-the)
+but dont worry about it too much. It just might explain some odd behaviour you see around 
+though!
+
 #### Instructions
 
 Not much to say about this. These are just what is done by the function. Make sure
@@ -183,6 +228,5 @@ def GetMenuSelection(menuOptions, inputPrompt):
         print("- " + option)
         
     # get input
-    return input(inputPrompt) 
-
+    return input(inputPrompt)
 ```
