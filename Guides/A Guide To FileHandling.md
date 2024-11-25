@@ -3,7 +3,8 @@
 #### [Return to Contents](../README.md)
 
 Additional Materials found at:
-<br> 
+<br> [Python File Handling - w3schools](https://www.w3schools.com/python/python_file_handling.asp)
+<br> [CSVs with Pandas Library - w3schools](https://www.w3schools.com/python/pandas/default.asp)
 
 ### What is Filehandling in Python?
 
@@ -11,9 +12,8 @@ Typically you will have managed files directly through the file explorer, howeve
 is also fully capable of interacting with files. This may be deleting, creating, writing
 to and reading from.
 
-This guide will cover specifically the inbuilt `open()` file manager within python, 
-alongside the usage of additional specialised libraries for handling CSV / Excel files 
-such as `Pandas`.
+This guide will cover specifically the inbuilt `open()` file manager within python, and
+parsing CSVs and their data.
 
 ##
 ### In-Built File Handling
@@ -197,10 +197,17 @@ in the file `"StoreVisitorSalesData.csv"`
 ```python
 import pandas as pd
 
-storeProduce = pd.read_csv("../ImportFiles/StoreVisitorSalesData.csv",
-                           usecols=["SalesLastWeek", "VisitorsLastWeek"])
-print(storeProduce.mean())
+storeProduce = pd.read_csv("../ImportFiles/StoreVisitorSalesData.csv")
+print(storeProduce)
 ```
+
+However, I will not go into too much information on this. Pandas Dataframes are particularly powerful tools which may
+end up oversimplifying your coursework. I would suggest instead attempting to build up a parser for the csv files
+yourself, which will easily help you implement classes and get used to utilising data and files.
+
+For those of you interested still in Pandas, I would make sure that you do not let it prevent your own development.
+Further reading material on it can be found [here](https://www.w3schools.com/python/pandas/default.asp) or you can
+utilise the learning resource "Files 3 - CSVs with Pandas.py"
 
 
 
