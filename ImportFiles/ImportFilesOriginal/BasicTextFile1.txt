@@ -1,0 +1,5 @@
+Hello there!
+You are currently reading all of the lines from within the file:
+"BasicTextFile1.txt"
+
+If you are reading this line, it is the last line!

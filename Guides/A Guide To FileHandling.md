@@ -141,7 +141,7 @@ The code below wishes to modify each line to add ":endline" to the end of it, so
 needs to read all the lines from the file in order to edit them
 
 ```python
-with open("../ImportFiles/test.txt", "r+") as myFile:
+with open("../ImportFiles/EditingFiles.txt", "r+") as myFile:
     fileLines = myFile.readlines()
 
     # enumerate required to modify the actual lines in fileLines
