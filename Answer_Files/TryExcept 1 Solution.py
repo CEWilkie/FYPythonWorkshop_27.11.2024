@@ -52,34 +52,48 @@ Divide(6, 4)  # outputs: "The result is: 1.5"
 
 
 """
-                        PART TWO
+                        PART THREE
 """
 
 
 def WriteNumberToFile(filePath):
+    addedNumbers = []
+
     try:
-        # could cause an error from bad filepath
-        file = open(filePath, "a")
+        # read mode is necessary to prevent creation of unwanted files from bad filepath
+        file = open(filePath, 'r')
+        file.close()
+
+        # now actually open the file as wanted
+        file = open(filePath, 'a')
 
         while True:
-            usrNum = input("Enter a number to add to the file, or 'eof'' to stop writing numbers")
+            usrNum = input("Enter a number to add to the file, or 'eof'' to stop writing numbers: ")
             if usrNum == "eof":
                 break
 
-            # Check is a number, could cause an error from being a non-numeric.
-            int(usrNum)
+            # Add inputted number to list. Attempting to convert non-numeric throws ValueError
+            addedNumbers.append(int(usrNum))
 
             # assuming nothing went wrong, this writes the original input string and a comma separator
             file.write(usrNum + ",")
 
-
-    except OSError:
-        print("File not found!")
-
-    except TypeError:
-        print("Non-Integer entered")
-
-    finally:
+        # normal operations, file closes here
         file.close()
 
-WriteNumberToFile("shdfbsdofjisdnfjksjdfnjkd")
+    except OSError:
+        # file.close() does not need to be done as it is never assigned
+        print("File not found!")
+
+    except ValueError:
+        print("Non-Integer entered")
+        # file.close() is required as the function is now exited before the normal operations file.close()
+        file.close()
+
+    finally:
+        # this always outputs no matter the results of the function
+        print("added numbers: " + str(addedNumbers))
+
+
+WriteNumberToFile("Numbers.txt")
+WriteNumberToFile("../ImportFiles/Numbers.txt")
