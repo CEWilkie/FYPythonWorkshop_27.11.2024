@@ -29,6 +29,8 @@ you will need to catch exceptions TypeError and ZeroDivisionError separately
 - Modify the function 'WriteNumberToFile' so that it utilises a finally to always output the numbers which have
 been added to the file
 
+you will want to catch exceptions OSError and ValueError
+
 """
 
 
@@ -83,7 +85,7 @@ def WriteNumberToFile(filePath):
         # normal operations, file closes here
         file.close()
 
-    except OSError:
+    except: # might want to make this specialised
         print("File not found!")
 
 
