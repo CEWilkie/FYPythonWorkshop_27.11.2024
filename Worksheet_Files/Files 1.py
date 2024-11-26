@@ -36,9 +36,9 @@ Suggested Material:
 "A Guide To Functions"
 """
 
-
 # I suggest using a variable to store the file path like this. This can make things quicker to edit
 # should the file path need changing!
+
 FileReadWriteTest_path = "../ImportFiles/FileReadWriteTest.txt"
 FixingFileSeparators_path = "../ImportFiles/FixingFileDataSeparators.txt"
 

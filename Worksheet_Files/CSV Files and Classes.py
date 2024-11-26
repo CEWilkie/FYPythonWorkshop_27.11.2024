@@ -5,6 +5,10 @@ For this exercise, you are going to interpret and parse data from the file "Stor
 (DATAFILE). This will be done through the usage and modification of classes, used
 to store and manipulate data retrieved from the file.
 
+Suggested Material:
+"A Guide To FileHandling" and Files 1
+"A Guide To Classes"
+
                 PART ONE
 - Read the data from file "StoreVisitorSalesData.csv"
 - using .split(), separate the data in each line into individual data elements.
@@ -55,3 +59,12 @@ However, Loughborough's latest sales data is missing.
 You may want to create a function for reading files into records!
 You could also implement an additional function in class Record to update data
 """
+
+# Heres the file paths youll be wanting. For those on visual studio,
+# you'll likely want to remove the ../ prefix
+
+DATAFILE_PATH = "../ImportFiles/StoreVisitorSalesData.csv"
+DATAFILE_LATEST_PATH = "../ImportFiles/StoreVisitorSalesDataLatest.csv"
+LOUGHBOROUGH_SALES_PATH = "../ImportFiles/LoughboroughSalesHistory.csv"
+
+
