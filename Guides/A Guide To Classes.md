@@ -60,6 +60,10 @@ the function utilised for setting up an object from a class. It may be defined w
 amount of parameters, the only required one being self. The function can then be used to 
 assign values to the object data (in this case `name` and `numbers`) on object creation.
 
+Typically, this would be referred to as a constructor, as it "constructs" the object of 
+the class. This name is much more universal across languages than `__init__()`, and it 
+would be good to make note of it.
+
 some classes may not take any parameters for object creation, and hence only the following
 is required:
 
