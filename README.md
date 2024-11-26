@@ -15,6 +15,7 @@ will find these useful!
 #### [A Guide To TryExcept](Guides/A%20Guide%20To%20TryExcept.md)
 #### [A Guide To FileHandling](Guides/A%20Guide%20To%20FileHandling.md)
 #### [A Guide To Classes](Guides/A%20Guide%20To%20Classes.md)
+#### [Various Other Helpful Things](Guides/Various%20Other%20Helpful%20Things.md)
 
 ## Additional Guides
 
