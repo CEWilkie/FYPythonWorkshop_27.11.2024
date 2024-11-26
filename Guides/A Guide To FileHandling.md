@@ -160,6 +160,27 @@ with open("../ImportFiles/EditingFiles.txt", "r+") as myFile:
 
 ```
 
+#### Encoding
+
+Files can be encoded in different ways. Typically you will deal with `utf-8` file encoding, 
+which is the default for the `open()` function. However, if a file is encoded differently,
+such as with `utf-8-sig` like the .csv files in `ImportFiles`, then it may be necessary to
+specify. This can be done via using the `encoding` parameter of the `open()` function:
+
+```python
+DATAFILE_PATH = "../ImportFiles/StoreVisitorSalesData.csv"
+encodedFile = open(DATAFILE_PATH, "r", encoding="utf-8-sig")
+# uses encoding utf-8-sig otherwise ï»¿ is appended to the front of the file!
+
+# utilise file ...
+
+encodedFile.close()
+```
+
+Generally, you wont need to worry about this, but in the case that you observe strange 
+symbols being placed in the file text when you read it, then it may signal that you need
+to use a different encoding.
+
 #### Read and Readlines
 
 `read()` will return a singular string containing the full contents read from the file.

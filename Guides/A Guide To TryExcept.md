@@ -112,3 +112,15 @@ def SumIntegers(nums):
 
     return result
 ```
+
+##
+### Some Helpful Exceptions
+
+| Function                  | Exception  |                        When                         |
+|:--------------------------|:----------:|:---------------------------------------------------:|
+| int() or other type casts | ValueError |         When the value cannot be converted          |
+| open()                    |  OSError   |            When the file failed to open             |
+| - + / *   maths functions | TypeError  | When attempting to use with a number and non-number |
+
+Typically, if you search for a function's documentation then it will be able to inform you
+about the errors that it raises.
