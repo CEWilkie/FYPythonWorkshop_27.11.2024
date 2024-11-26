@@ -30,3 +30,10 @@ missing data with the mean of its sales from the previous 7 weeks in file
 - determine the change in percentage from last weeks data to the latest data
 """
 
+import pandas as pd
+
+# Heres the file paths you'll want. Visual Studio users may wish to remove the prefix of ../
+DATAFILE = "../ImportFiles/StoreVisitorSalesData.csv"
+LATEST_DATAFILE = "../ImportFiles/StoreVisitorSalesDataLatest.csv"
+LOUGHBOROUGH_SALES = "../ImportFiles/LoughboroughSalesHistory.csv"
+
